@@ -1,0 +1,69 @@
+<form method="post" action="/{{ ele.id }}/delete">
+                {% csrf_token %}
+                <button type="submit">Delete</button>
+            </form>
+def delete(request, id):
+    data = get_object_or_404(RecipeModel, pk=id)
+    data.delete()
+    return redirect('/home')
+
+
+<!--{% csrf_token %}-->
+<!--<form method="post">-->
+<!--    <table>-->
+<!--        <tr>-->
+<!--            <td><b>Name :</b></td><td>{{ data.recipename }}</td><br>-->
+<!--        </tr>-->
+<!--        <tr>-->
+<!--            <td><b>Ingredients :</b> </td><td>{{ data.ingredients }}</td><br>-->
+<!--        </tr>-->
+<!--        <tr>-->
+<!--            <td><b>Making :</b></td><td>{{ data.making }}</td>-->
+<!--        </tr>-->
+<!--    </table>-->
+<!--</form>-->
+
+
+home
+------------
+
+{% load static %}
+<center><h2>Recipe list</h2>
+<table>
+    <thead>
+
+    </thead>
+    <tbody>
+    {% for ele in data %}
+        <tr>
+        <td><a href="/{{ ele.id }}/recipeapp/details">{{ ele.recipename }}</a></td>
+
+        <td>
+
+                <button type="submit">Delete</button>
+
+
+        </td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+</center><br>
+<center><a href="recipeapp/create.html">Create Recipe</a> </center>
+
+
+delete url
+----------------
+
+# path('<int:id>/delete', views.delete, name='delete'),
+
+
+request response cylcle,django arctecture,mvt
+advantages of django
+what is jango orm
+migrations
+agregate and annotate
+filter and get
+select related and prefetched related
+django relational fields
+

@@ -1,0 +1,79 @@
+# Create your models here.
+# class studentaplication(models.Model):
+#     name=models.CharField(max_length=200)
+#     email=models.EmailField()
+#     sscmarks=models.IntegerField()
+#     intermarks=models.IntegerField()
+# class studentreg(models.Model):
+#     name=models.OneToOneField(studentaplication,on_delete=models.CASCADE())
+#     email=models.OneToOneField(studentaplication,on_delete=models.CASCADE())
+#     password=models.CharField(max_length=100)
+#     department=models.CharField(max_length=20)
+# class staffreg(models.Model):
+#     name = models.CharField(max_length=200)
+#     email = models.EmailField()
+#     password = models.CharField(max_length=100)
+#     mobile=models.IntegerField()
+#     qualification=models.CharField(max_length=20)
+#     department=models.CharField(max_length=
+
+# class StudentAplication(models.Model):
+#     name=models.CharField(max_length=200)
+#     email=models.EmailField()
+#     sscmarks=models.IntegerField()
+#     intermarks=models.IntegerField()
+
+
+
+VIEWS.PY
+-----------------------
+# def stdapplication(request):
+#     if request.method == "POST":
+#         studentaplication.objects.create(
+#             name=request.POST['name'],
+#             email=request.POST['emil'],
+#             sscmrks=request.POST['sscmarks'],
+#             intermarks=request.POST['intermarks']
+#         )
+#         return render(request,"home.html")
+#     else:
+#         return render(request, "home.html")
+
+
+# def signup(request):
+#     if request.method == 'POST':
+#         name = request.POST['name']
+#         username = request.POST['username']
+#         password = request.POST['password']
+#         email = request.POST['email']
+#         department=request.POST['department']
+#         user = User.objects.create_user(username=username, email=email, password=password)
+#         return render(request,"signup.html")
+#     else:
+#         return render(request, "signup.html")
+
+# def index(request):
+#     if request.method == 'POST':
+#         email = request.POST['email']
+#         password = request.POST['password']
+#         user = authenticate(request, email=email, password=password)
+#
+#         if user is not None:
+#             login(request, user)
+#             return render(request,"stdetails.html")
+#         else:
+#             return render(request, "signup.html")
+#
+#     else:
+#         return render(request, "signup.html")
+#
+# def recipe_list(request):
+#     recipes_list = studentreg.objects.all()
+#     return render(request, "stdlist.html", {'recipe_list': recipe_list})
+#
+#
+# def student_detail(request, pk):
+#     details = studentreg.objects.get(pk=pk)
+#     return render(request, "stdetails.html", {'details': details})
+
+

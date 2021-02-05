@@ -1,0 +1,1 @@
+return HttpResponseRedirect(reverse('studentapp:stddetail'))

@@ -1,0 +1,33 @@
+1st page
+----------------
+questuins------->click-------------->
+			2nd page
+			----------------
+			question
+			choices
+			votes
+			submit---------->click-------------------->3rd page
+			/\			--------------------
+			|			question
+			|			choices (total votes)
+			|
+			|  ----------------------------------------------back
+
+
+
+
+ 			 db design
+			---------------------
+
+question table
+----------------------
+question_text
+date
+
+
+choice table
+--------------------
+question_text           choieces           votes
+
+
+								
